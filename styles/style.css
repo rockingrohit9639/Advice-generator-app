@@ -34,6 +34,12 @@ body {
   font-family: var(--font-family);
 }
 
+a {
+  text-decoration: none;
+  margin-left: 0.5rem;
+  color: var(--color-primary-neon-green);
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -105,6 +111,16 @@ body {
     -5px -5px 10px -2px var(--color-primary-neon-green-shadow),
     5px -5px 10px -2px var(--color-primary-neon-green-shadow),
     -5px 5px 10px -2px var(--color-primary-neon-green-shadow);
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding-block: 1.5rem;
+  color: var(--color-primary-light-cyan);
+
 }
 
 @media only screen and (min-width: 375px) {
