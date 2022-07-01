@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap");
 
 * {
   margin: 0;
@@ -10,6 +10,7 @@
   /************* Colors *************/
   --color-primary-light-cyan: hsl(193, 38%, 86%);
   --color-primary-neon-green: hsl(150, 100%, 66%);
+  --color-primary-neon-green-shadow: hsla(150, 100%, 66%, 0.388);
 
   --color-neutral-blue: hsl(217, 19%, 38%);
   --color-neutral-dark-grayish-blue: hsl(217, 19%, 24%);
@@ -31,4 +32,75 @@
 body {
   background-color: var(--color-neutral-dark-blue);
   font-family: var(--font-family);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.adviceWrapper {
+  width: 90%;
+  height: max-content;
+  background-color: var(--color-neutral-dark-grayish-blue);
+  padding: 1.5rem;
+  border-radius: 10px;
+  position: relative;
+}
+
+.adviceWrapper__heading {
+  font-size: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-primary-neon-green);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.adviceWrapper__advice {
+  font-size: var(--font-size-quote);
+  font-weight: var(--font-weight);
+  color: var(--color-primary-light-cyan);
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.adviceWrapper__dividerImg {
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.adviceWrapper__dice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary-neon-green);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.adviceWrapper__dice:hover {
+  box-shadow: 5px 5px 10px -2px var(--color-primary-neon-green-shadow),
+    -5px -5px 10px -2px var(--color-primary-neon-green-shadow),
+    5px -5px 10px -2px var(--color-primary-neon-green-shadow),
+    -5px 5px 10px -2px var(--color-primary-neon-green-shadow);
+}
+
+@media only screen and (min-width: 375px) {
+  .adviceWrapper {
+    width: 40%;
+  }
 }
